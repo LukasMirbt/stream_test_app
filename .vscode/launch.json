@@ -1,0 +1,55 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Server",
+            "request": "launch",
+            "type": "dart",
+            "program": "stream_test_app_server/bin/main.dart",
+            "args": [
+                "--apply-migrations",
+            ]
+        },
+        {
+            "name": "macOS",
+            "request": "launch",
+            "type": "dart",
+            "program": "stream_test_app_flutter/lib/main.dart",
+            "args": [
+                "-d",
+                "macOS",
+            ]
+        },
+        {
+            "name": "Flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "stream_test_app_flutter/lib/main.dart",
+            "args": [
+                "--web-port",
+                "49660",
+            ]
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Flutter & Server",
+            "preLaunchTask": "Docker Compose Up",
+            "configurations": [
+                "Flutter",
+                "Server",
+            ]
+        },
+        {
+            "name": "macOS & Server",
+            "preLaunchTask": "Docker Compose Up",
+            "configurations": [
+                "macOS",
+                "Server",
+            ]
+        }
+    ]
+}

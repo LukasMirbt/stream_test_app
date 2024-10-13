@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Docker Compose Up",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/stream_test_app_server"
+            },
+            "command": "docker compose up --build --detach",
+        }
+    ]
+}
